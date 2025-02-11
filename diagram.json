@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "author": "uriel",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-pi-pico-w",
+        "id": "pico",
+        "top": -70.45,
+        "left": -34.85,
+        "attrs": { "builder": "pico-sdk" }
+      },
+      {
+        "type": "wokwi-text",
+        "id": "text2",
+        "top": -115.2,
+        "left": -86.4,
+        "attrs": { "text": "Raspberry Pi Pico" }
+      },
+      { "type": "wokwi-servo", "id": "servo1", "top": -117.2, "left": 124.8, "attrs": {} },
+      { "type": "wokwi-led", "id": "led1", "top": 25.2, "left": -169, "attrs": { "color": "red" } },
+      {
+        "type": "wokwi-resistor",
+        "id": "r1",
+        "top": 99.95,
+        "left": -124.8,
+        "attrs": { "value": "1000" }
+      }
+    ],
+    "connections": [
+      [ "servo1:GND", "pico:GND.8", "black", [ "h0" ] ],
+      [ "servo1:V+", "pico:3V3", "green", [ "h0" ] ],
+      [ "servo1:PWM", "pico:GP22", "green", [ "h0" ] ],
+      [ "led1:A", "pico:GP12", "green", [ "v0" ] ],
+      [ "led1:C", "r1:1", "green", [ "v0" ] ],
+      [ "r1:2", "pico:GND.4", "green", [ "v0" ] ]
+    ],
+    "dependencies": {}
+  }
