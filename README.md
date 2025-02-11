@@ -10,7 +10,7 @@ Este projeto controla um servomotor através do PWM utilizando a GPIO22 do Raspb
 
 Para clonar este repositório, abra um terminal e execute o comando:
 
-git clone https://github.com/uriel-hapuq/clocks_temporizadores.git
+git clone https://github.com/uriel-hapuque/servo_pwm
 
 OU baixe o arquivo .zip no GitHub
 
